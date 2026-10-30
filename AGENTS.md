@@ -21,3 +21,14 @@ When generating or modifying templates, strictly differentiate between target en
 * **Language Policy:** All templates, rules, and internal documentation MUST be written in English. If the target project has a different user-facing language (e.g., German), specify this clearly in the template's language policy.
 * **Scannability:** Keep rules concise. Use bolding for key terms and bullet points for lists. Avoid long prose.
 * **No Redundancy:** Keep the templates as clean and short as possible. Do not repeat standard programming knowledge (e.g., "write clean code") unless tied to a specific project constraint (e.g., "remove all dead code entirely").
+## Gates
+
+Regeln dieser Ebene. Was nur ein Verzeichnis betrifft, gehört in die
+`AGENTS.md` **dieses** Verzeichnisses — sie wird geladen, wenn eine Datei
+daraus gelesen wird.
+
+Ein Plan in `docs/plans/` beginnt mit `**Status:** Plan | In Arbeit | Done |
+Empfehlung, nicht implementiert`.
+
+Die kanonischen Agent-Regeln laufen über `ratchet` (Preset `agent-rules`):
+`ratchet check` vor jedem Commit und in der CI.
